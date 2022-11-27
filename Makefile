@@ -8,4 +8,7 @@ publish:
 	npm publish --dry-run
 
 brain-games:
-	node bin/brain-games.js
+	bin/brain-games.js
+
+brain-even:
+	bin/brain-even.js
