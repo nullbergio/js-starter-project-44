@@ -15,3 +15,6 @@ brain-even:
 
 brain-calc:
 	bin/brain-calc.js
+
+brain-gcd:
+	bin/brain-gcd.js
