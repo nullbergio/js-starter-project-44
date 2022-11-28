@@ -32,9 +32,6 @@ const getTask = () => {
   };
 };
 
-// export const question = `${number1} ${operation} ${number2}`;
-// export const answer = calculate(number1, number2, operation);
-
 const playCalc = () => {
   play(gameDescription, getTask);
   return null;
