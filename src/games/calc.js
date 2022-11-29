@@ -1,3 +1,4 @@
+import _ from 'lodash';
 import play from '../engine.js';
 
 export const gameDescription = 'What is the result of the expression?';
@@ -22,9 +23,9 @@ const getTask = () => {
   };
 
   const operations = ['+', '-', '*'];
-  const operation = operations[Math.floor(Math.random() * operations.length)];
-  const number1 = Math.floor(Math.random() * 99 + 1);
-  const number2 = Math.floor(Math.random() * 99 + 1);
+  const operation = operations[_.random(0, operations.length - 1)];
+  const number1 = _.random(1, 100);
+  const number2 = _.random(1, 100);
 
   return {
     question: `${number1} ${operation} ${number2}`,
