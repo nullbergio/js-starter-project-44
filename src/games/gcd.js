@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import play from '../engine.js';
+import getName from '../cli.js';
 
 export const gameDescription = 'Find the greatest common divisor of given numbers.';
 
@@ -25,7 +26,7 @@ const getTask = () => {
 };
 
 const playGcd = () => {
-  play(gameDescription, getTask);
+  play(getName(), gameDescription, getTask);
   return null;
 };
 

@@ -2,11 +2,8 @@ import readlineSync from 'readline-sync';
 
 const maxWins = 3;
 
-const play = (gameDescription, getTask) => {
+const play = (name, gameDescription, getTask) => {
   for (let scores = 0; scores < maxWins;) {
-    console.log('Welcome to the Brain Games!');
-    const userName = readlineSync.question('May I have your name? ');
-    console.log(`Hello, ${userName}!`);
     console.log(gameDescription);
 
     while (scores < maxWins) {
@@ -18,11 +15,11 @@ const play = (gameDescription, getTask) => {
         scores += 1;
       } else {
         console.log(`'${userAnswer}' is wrong answer ;(. Correct answer was '${task.answer}'.`);
-        console.log(`Let's try again, ${userName}!`);
+        console.log(`Let's try again, ${name}!`);
         return null;
       }
     }
-    console.log(`Congratulations, ${userName}!`);
+    console.log(`Congratulations, ${name}!`);
   }
   return null;
 };

@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import play from '../engine.js';
+import getName from '../cli.js';
 
 export const gameDescription = 'What is the result of the expression?';
 
@@ -34,7 +35,7 @@ const getTask = () => {
 };
 
 const playCalc = () => {
-  play(gameDescription, getTask);
+  play(getName(), gameDescription, getTask);
   return null;
 };
 

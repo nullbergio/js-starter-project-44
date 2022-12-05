@@ -1,5 +1,6 @@
 import _ from 'lodash';
 import play from '../engine.js';
+import getName from '../cli.js';
 
 export const gameDescription = 'Answer "yes" if the number is even, otherwise answer "no".';
 
@@ -11,7 +12,7 @@ const getTask = () => {
 };
 
 const playEven = () => {
-  play(gameDescription, getTask);
+  play(getName(), gameDescription, getTask);
   return null;
 };
 
